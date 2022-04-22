@@ -5,13 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <style>
+        *{
+            font-size: 30px;
+        }
+        body{
+            background: rgb(252, 255, 176);
+        }
+        center{
+            font-size: 36px;
+        }
+        .link{
+            width: fit-content;
+            padding: 5px;
+            border-radius: 30px;
+            background: royalblue;
+            margin: 10px;
+            user-select: none;
+            transition: 1s;
+        }
+        .link:hover{
+            transform: scale(1.1,1.1) translateX(50px);
+            background: violet;
+        }
+    </style>
 </head>
 <body>
-    <h1><u>Home Page</u></h1>
+    <center><h1><u>Home Page</u></h1></center>
     <br/>
     <h2><i>Click the following links to the respective index pages of each user</i></h2>
-    <br/>
-    <br/>
     <ul>
         <li class="link" id="hhz">
             Hein Htet Zaw
