@@ -3,9 +3,125 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Min Thet Kyaw's Home</title>
+	<style>
+		*{
+			font-size: 30px;
+		}
+		body{
+			margin: 0;
+		}
+		.topic{
+			font-size: 36px;
+			text-decoration: underline;
+			text-align: center;
+		}
+		.thead{
+			text-align: center;
+			font-size: 32px;
+			text-decoration: underline;
+		}
+		table{
+			border: 1px solid black;
+			border-collapse: collapse;
+			width: 100%;
+			text-align: center;
+			transition: 1s;
+		}
+		.odd{
+			background: rgb(249, 165, 165);
+		}
+		.even{
+			background: rgb(170, 252, 255);
+		}
+		tr{
+			transition: 1s;
+		}
+		tr:hover{
+			background: rgb(74, 255, 74);
+		}
+		.ttop{
+			background: grey !important;
+			font-weight: bolder;
+		}
+		td{
+			transition: 2s;
+		}
+		td:nth-of-type(1){
+			width: 5%;
+		}
+		td:nth-of-type(2){
+			width: 20%;
+		}
+		td:nth-of-type(3){
+			width: 25%;
+		}
+		td:nth-of-type(4){
+			width: 50%;
+		}
+		.tlink:hover{
+			background: black;
+			color: white;
+			border-radius: 30px;
+			transform: scale(1.1,1.1);
+		}
+	</style>
 </head>
 <body>
 
+	<h1 class="topic">Min Thet Kyaw's Index Home page</h1>
+
+	<p class="intro">The written pages are summarized below... click the following to reach each site</p>
+	<br>
+	<h3 class="thead">Done sites</h3>
+	<table id="table" class="table">
+		<tr class="ttop">
+			<td>No.</td>
+			<td>Name</td>
+			<td>Link</td>
+			<td>Discription</td>
+		</tr>
+	</table>
+
 </body>
+<script>
+
+	// Setting variable
+
+	let table = document.getElementById("table")
+	let tableInfo = []
+
+	// Objects added
+
+	let one = {
+		name : 'First Web',
+		link : './firstweb',
+		discription : 'some blah blah'
+	}
+	tableInfo.push(one)
+
+	let two = {
+		name : 'Second Web',
+		link : './secondweb',
+		discription : 'new blah blah'
+	}
+	tableInfo.push(two)
+
+
+	// HTML insertation
+
+	for(let i=0;i<=tableInfo.length-1;i++){
+		let siteIndex = `<td>${i+1}</td>`
+		let siteName = `<td>${tableInfo[i].name}</td>`
+		let siteLink = `<td class="tlink" onclick='window.location="siteLink"'>${tableInfo[i].link}</td>`
+		let siteDiscription = `<td>${tableInfo[i].discription}</td>`
+		if(i%2 == 0){
+			table.innerHTML += `<tr class="even">${siteIndex+siteName+siteLink+siteDiscription}</tr>`
+		}
+		else{
+			table.innerHTML += `<tr class="odd">${siteIndex+siteName+siteLink+siteDiscription}</tr>`
+		}
+	}
+
+</script>
 </html>
