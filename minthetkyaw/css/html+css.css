@@ -1,0 +1,38 @@
+:root{
+    --primary:rgb(78, 78, 239);
+    --secondary:rgb(93, 91, 91);
+}
+*{
+    text-align: justify;
+}
+body{
+    background: linear-gradient(to bottom right,var(--primary),var(--secondary));
+    margin: 0;
+}
+h3{
+    margin: 10px 15px;
+}
+.topic{
+    margin: 0;
+    /* background-color: var(--secondary); */
+    padding: 10px;
+    text-align: center;
+    color: red;
+    transition: 2s;
+}
+.topic:hover{
+    background-color: white;
+    color: var(--primary);
+}
+.container{
+    
+}
+.first{
+    background: rgb(240, 134, 151);
+}
+.second{
+    background: lime;
+}
+.third{
+    background: violet;
+}

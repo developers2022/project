@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1><u>Home Page</u></h1>
+    <br/>
+    <h2><i>Click the following links to the respective index pages of each user</i></h2>
+    <br/>
+    <br/>
+    <ul>
+        <li class="link" id="hhz">
+            Hein Htet Zaw
+        </li>
+        <li class="link" id="kkl">
+            Kaung Khant Lwin
+        </li>
+        <li class="link" id="mhk">
+            Min Hein Kyaw
+        </li>
+        <li class="link" id="mtk">
+            Min Thet Kyaw
+        </li>
+        <li class="link" id="mn">
+            Myint Naing
+        </li>
+    </ul>
+</body>
+<script>
+
+    let hhz = document.getElementById("hhz")
+    let kkl = document.getElementById("kkl")
+    let mhk = document.getElementById("mhk")
+    let mtk = document.getElementById("mtk")
+    let mn = document.getElementById("mn")
+
+    hhz.addEventListener("click",function(){
+        window.location = "./heinhtetzaw/index.html"
+    })
+    kkl.addEventListener("click",function(){
+        window.location = "./kaungkhantlwin/index.html"
+    })
+    mhk.addEventListener("click",function(){
+        window.location = "./minheinkyaw/index.html"
+    })
+    mtk.addEventListener("click",function(){
+        window.location = "./minthetkyaw/index.html"
+    })
+    mn.addEventListener("click",function(){
+        window.location = "./myintnaing/index.html"
+    })
+</script>
+</html>
