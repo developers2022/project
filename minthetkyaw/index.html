@@ -113,7 +113,7 @@
 	for(let i=0;i<=tableInfo.length-1;i++){
 		let siteIndex = `<td>${i+1}</td>`
 		let siteName = `<td>${tableInfo[i].name}</td>`
-		let siteLink = `<td class="tlink" onclick='window.location="siteLink"'>${tableInfo[i].link}</td>`
+		let siteLink = `<td class="tlink" onclick='window.location="${tableInfo[i].link}"'>${tableInfo[i].link}</td>`
 		let siteDiscription = `<td>${tableInfo[i].discription}</td>`
 		if(i%2 == 0){
 			table.innerHTML += `<tr class="even">${siteIndex+siteName+siteLink+siteDiscription}</tr>`
