@@ -31,49 +31,23 @@
     </style>
 </head>
 <body>
-    <center><h1><u>Home Page</u></h1></center>
-    <br/>
+    <center><h1><u>Home Page</u></h1></center><br/>
     <h2><i>Click the following links to the respective index pages of each user</i></h2>
     <ul>
-        <li class="link" id="hhz">
-            Hein Htet Zaw
-        </li>
-        <li class="link" id="kkl">
-            Kaung Khant Lwin
-        </li>
-        <li class="link" id="mhk">
-            Min Hein Kyaw
-        </li>
-        <li class="link" id="mtk">
-            Min Thet Kyaw
-        </li>
-        <li class="link" id="mn">
-            Myint Naing
-        </li>
+        <li class="link">Hein Htet Zaw</li>
+        <li class="link">Kaung Khant Lwin</li>
+        <li class="link">Min Hein Kyaw</li>
+        <li class="link">Min Thet Kyaw</li>
+        <li class="link">Myint Naing</li>
     </ul>
 </body>
 <script>
-
-    let hhz = document.getElementById("hhz")
-    let kkl = document.getElementById("kkl")
-    let mhk = document.getElementById("mhk")
-    let mtk = document.getElementById("mtk")
-    let mn = document.getElementById("mn")
-
-    hhz.addEventListener("click",function(){
-        window.location = "./heinhtetzaw/index.html"
-    })
-    kkl.addEventListener("click",function(){
-        window.location = "./kaungkhantlwin/index.html"
-    })
-    mhk.addEventListener("click",function(){
-        window.location = "./minheinkyaw/index.html"
-    })
-    mtk.addEventListener("click",function(){
-        window.location = "./minthetkyaw/index.html"
-    })
-    mn.addEventListener("click",function(){
-        window.location = "./myintnaing/index.html"
-    })
+    let links = document.querySelectorAll('.link');
+    for(let linkCount in links){
+        links[linkCount].addEventListener("click",() => {
+            let link = links[linkCount].innerText.split(' ').join('').toLowerCase();
+            window.location = `./${link}/index.html`;
+        })
+    }
 </script>
 </html>
